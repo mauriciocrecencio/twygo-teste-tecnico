@@ -19,3 +19,15 @@ services:
     restart: always
     ports:
       - "8080:8080"
+  backend:
+    container_name: backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - database
+    environment:
+      DATABASE_URL: postgresql://root:root@database:5432/twygo_db

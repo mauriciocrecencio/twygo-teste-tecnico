@@ -16,24 +16,25 @@ O projeto é dividido em duas partes principais:
 
 A aplicação pode ser iniciada sem problemas seguindo estes passos:
 
-1. Banco de Dados (usando Docker):
-   ```
-   docker-compose up database
-   ```
-   Isso iniciará o PostgreSQL em um container Docker.
 
-2. Backend:
+
+1. Backend e Banco de dados:
    ```
    cd backend
-   bundle install
-   rails server
+   docker-compose up
    ```
 
-3. Frontend:
+2. Frontend:
    ```
    cd frontend
    npm install
    npm start
+   ```
+
+3. Acesso à Aplicação:
+   Após iniciar o backend e o frontend, acesse a aplicação através do navegador:
+   ```
+   http://localhost:3001
    ```
 
 
